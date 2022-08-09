@@ -1,0 +1,154 @@
+h1 {
+  text-align: center;
+  font-size: 44px;
+  font-family: "Poiret One", cursive;
+  color: #004445;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Poiret One", cursive;
+  font-weight: 600;
+  color: #004445;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Rajdhani", sans-serif;
+  color: #6db193;
+  font-weight: 400;
+}
+
+video {
+  width: 150px;
+  display: block;
+  margin: 0px 10px 12px 10px;
+  border-radius: 50px 50px;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
+  border: 2px solid #0b8457;
+  border-radius: 30px;
+  padding: 20px 70px;
+  background-color: rgb(253, 251, 246);
+}
+
+.form-inline {
+  position: static;
+}
+
+#farenheight-button {
+  border: none;
+  background-color: transparent;
+  color: #6db193;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+}
+
+#celcius-button {
+  border: none;
+  background-color: transparent;
+  color: #6db193;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+}
+
+#farenheight-button:hover {
+  font-size: 24px;
+  color: #0b8457;
+  transition: all 200ms ease-in-out;
+}
+#celcius-button:hover {
+  font-size: 24px;
+  color: #0b8457;
+  transition: all 200ms ease-in-out;
+}
+.button-switch {
+  width: 70px;
+  height: 20px;
+  padding: 0px;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.current-weather-placement {
+  margin: 20px 190px;
+  border-radius: 30px;
+}
+
+.card,
+.mb-3 {
+  border-radius: 10px;
+  border: rgb(248, 180, 0, 0.2) solid;
+  background-color: transparent;
+}
+
+.current-weather {
+  font-size: 58px;
+  text-align: center;
+}
+
+.card-title-Currently {
+  font-size: 20px;
+  text-align: center;
+  color: #004445;
+  margin: 0px 0px 20px 0px;
+}
+
+#date {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Rajdhani", sans-serif;
+  color: #0b8457;
+  margin: 0px 0px;
+}
+#time {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Rajdhani", sans-serif;
+  color: #0b8457;
+}
+.col-md-6 {
+  text-align: center;
+  background-color: transparent;
+}
+
+.card-text-weekdays {
+  text-align: center;
+  font-size: 14px;
+  color: #004445;
+}
+.card-body-box {
+  display: block;
+  margin: 0 auto;
+  border: rgb(248, 180, 0, 0.25) solid;
+  max-width: 110px;
+  border-radius: 25px;
+}
+
+.card-weekdays {
+  border: none;
+  max-width: 180px;
+}
+
+.fa-solid,
+.fa-sun {
+  font-size: 40px;
+  margin: 5px 26px;
+  color: rgb(0, 68, 69, 0.8);
+}
