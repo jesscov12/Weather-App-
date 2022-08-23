@@ -50,7 +50,17 @@ function citySearch(event) {
   search(city);
 }
 
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  let celciusTemp = ((89 - 32) * 5) / 9;
+  let tempElement = document.querySelector("#weather-now");
+  tempElement.innerHTML = ` ${Math.round(celciusTemp)}°`;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySearch);
+
+let celciusLink = document.querySelector("#celcius-button");
+celciusLink.addEventListener("click", displayCelciusTemp);
 
 search("Austin");
