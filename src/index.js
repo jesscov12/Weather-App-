@@ -31,9 +31,9 @@ if (minutes < 10) {
 currentTime.innerHTML = `${hours}:${minutes}`;
 
 function showTemp(response) {
-  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
+  fahrenheitTemperature = response.data.main.temp;
+  let temperature = Math.round(fahrenheitTemperature);
   let displayedTemp = document.querySelector("#weather-now");
   displayedTemp.innerHTML = `${temperature}°`;
 }
@@ -52,15 +52,26 @@ function citySearch(event) {
 
 function displayCelciusTemp(event) {
   event.preventDefault();
-  let celciusTemp = ((89 - 32) * 5) / 9;
   let tempElement = document.querySelector("#weather-now");
-  tempElement.innerHTML = ` ${Math.round(celciusTemp)}°`;
+  let celciusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
+  tempElement.innerHTML = `${Math.round(celciusTemp)}°`;
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#weather-now");
+  tempElement = `${Math.round(fahrenheitTemperature)}°`;
+}
+
+let fahrenheitTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySearch);
 
 let celciusLink = document.querySelector("#celcius-button");
 celciusLink.addEventListener("click", displayCelciusTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-button");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("Austin");
