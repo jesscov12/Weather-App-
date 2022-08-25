@@ -46,7 +46,7 @@ video {
   position: static;
 }
 
-#farenheight-button {
+#fahrenheit-button {
   border: none;
   background-color: transparent;
   color: #6db193;
@@ -62,7 +62,7 @@ video {
   font-size: 12px;
 }
 
-#farenheight-button:hover {
+#fahrenheit-button:hover {
   font-size: 24px;
   color: #0b8457;
   transition: all 200ms ease-in-out;

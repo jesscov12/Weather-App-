@@ -60,7 +60,7 @@ function displayCelciusTemp(event) {
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#weather-now");
-  tempElement = `${Math.round(fahrenheitTemperature)}°`;
+  tempElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
 }
 
 let fahrenheitTemperature = null;
