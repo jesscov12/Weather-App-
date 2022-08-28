@@ -123,6 +123,18 @@ video {
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
 }
+
+#windSpeed,
+#description {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  font-family: "Rajdhani", sans-serif;
+  color: #6db193;
+  margin: 0px 0px;
+  text-transform: capitalize;
+}
+
 .col-md-6 {
   text-align: center;
   background-color: transparent;

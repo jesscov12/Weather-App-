@@ -31,6 +31,12 @@ if (minutes < 10) {
 currentTime.innerHTML = `${hours}:${minutes}`;
 
 function showTemp(response) {
+  console.log(response);
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#windSpeed").innerHTML = `Wind Speed: ${Math.round(
+    response.data.wind.speed
+  )}mph`;
   document.querySelector("#city").innerHTML = response.data.name;
   fahrenheitTemperature = response.data.main.temp;
   let temperature = Math.round(fahrenheitTemperature);
