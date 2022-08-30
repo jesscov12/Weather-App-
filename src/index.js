@@ -37,6 +37,12 @@ function showTemp(response) {
   document.querySelector("#windSpeed").innerHTML = `Wind Speed: ${Math.round(
     response.data.wind.speed
   )}mph`;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   document.querySelector("#city").innerHTML = response.data.name;
   fahrenheitTemperature = response.data.main.temp;
   let temperature = Math.round(fahrenheitTemperature);
