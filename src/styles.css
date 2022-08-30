@@ -78,6 +78,7 @@ p {
   background-color: transparent;
   border: 1px solid;
   border-radius: 3px;
+  margin-top: 20px;
 }
 
 .current-weather-placement {
@@ -102,21 +103,22 @@ p {
   font-size: 20px;
   text-align: center;
   color: #004445;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 12px 0px;
 }
 
 #date {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
   margin: 0px 0px;
 }
 #time {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
+  margin-bottom: 5px;
 }
 
 #windSpeed,
