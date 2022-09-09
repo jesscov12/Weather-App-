@@ -30,6 +30,33 @@ if (minutes < 10) {
 }
 currentTime.innerHTML = `${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="card-weekdays">
+            <div class="card-body-box">
+              <i class="fa-solid fa-sun"></i>
+              <h5 class="card-text-weekdays">${day}</h5>
+              <p>     
+                86°/70° <br />
+                3%
+              </p>
+            </div>
+          </div>
+          </div>
+       `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   console.log(response);
   document.querySelector("#description").innerHTML =
@@ -77,6 +104,7 @@ function displayFahrenheitTemp(event) {
 
 let fahrenheitTemperature = null;
 
+displayForecast();
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySearch);
 
