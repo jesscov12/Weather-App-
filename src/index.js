@@ -55,12 +55,12 @@ function displayForecast(response) {
                   forecastDay.dt
                 )} </h5>
                 <div class="weather-forecast-temps">
-                  <span class="weather-forecast-temps-max"> ${
+                  <span class="weather-forecast-temps-max"> ${Math.round(
                     forecastDay.temp.max
-                  } °/</span>
-                  <span class="weather-forecast-temps-min"> ${
+                  )} °/</span>
+                  <span class="weather-forecast-temps-min"> ${Math.round(
                     forecastDay.temp.min
-                  } ° </span>
+                  )} ° </span>
                 </div>
               </div>
             </div>
