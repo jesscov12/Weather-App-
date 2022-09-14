@@ -31,29 +31,28 @@ if (minutes < 10) {
 currentTime.innerHTML = `${hours}:${minutes}`;
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `
-        <div class="col-2">
-          <div class="card-weekdays">
-            <div class="card-body-box">
-              <i class="fa-solid fa-sun"></i>
-              <h5 class="card-text-weekdays">${day}</h5>
-              <p>     
-                86°/70° <br />
-                3%
-              </p>
+      `<div class="col-2">
+            <div class="card-weekdays">
+              <div class="card-body-box">
+                <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="60" />
+                <h5 class="card-text-weekdays">${forecastDay.dt} </h5>
+                <div class="weather-forecast-temps">
+                  <span class="weather-forecast-temps-max"> ${forecastDay.temp.max} °/</span>
+                  <span class="weather-forecast-temps-min"> ${forecastDay.temp.min} ° </span>
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-       `;
+          </div>`;
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -87,6 +86,7 @@ function showTemp(response) {
 
   getForecast(response.data.coord);
 }
+
 function search(city) {
   let units = "imperial";
   let myApi = "1abc917551b1a4a6a106d16dc2865cf5";
