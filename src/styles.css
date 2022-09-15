@@ -79,6 +79,7 @@ p {
   border: 1px solid;
   border-radius: 3px;
   margin-top: 20px;
+  color: #28a745;
 }
 
 .current-weather-placement {
@@ -100,7 +101,7 @@ p {
 }
 
 .card-title-Currently {
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   color: #004445;
   margin: 0px 0px 12px 0px;
@@ -108,26 +109,25 @@ p {
 
 #date {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
   margin: 0px 0px;
 }
 #time {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Rajdhani", sans-serif;
   color: #0b8457;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #windSpeed,
 #description {
   text-align: center;
   font-size: 12px;
-  font-style: italic;
   font-family: "Rajdhani", sans-serif;
-  color: #6db193;
+  color: #eac100;
   margin: 0px 0px;
   text-transform: capitalize;
 }
@@ -160,4 +160,15 @@ p {
   font-size: 40px;
   margin: 5px 26px;
   color: rgb(0, 68, 69, 0.8);
+}
+
+.weather-forecast-temps {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #004445;
+}
+img {
+  display: block;
+  margin: auto;
 }
